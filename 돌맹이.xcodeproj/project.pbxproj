@@ -39,6 +39,30 @@
 			);
 			target = 5E7C95602C4923AC0017CF3B /* 돌맹이 */;
 		};
+		5E7C95E02C4924620017CF3B /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"SF-Pro-Text-Black.otf",
+				"SF-Pro-Text-BlackItalic.otf",
+				"SF-Pro-Text-Bold.otf",
+				"SF-Pro-Text-BoldItalic.otf",
+				"SF-Pro-Text-Heavy.otf",
+				"SF-Pro-Text-HeavyItalic.otf",
+				"SF-Pro-Text-Light.otf",
+				"SF-Pro-Text-LightItalic.otf",
+				"SF-Pro-Text-Medium.otf",
+				"SF-Pro-Text-MediumItalic.otf",
+				"SF-Pro-Text-Regular.otf",
+				"SF-Pro-Text-RegularItalic.otf",
+				"SF-Pro-Text-Semibold.otf",
+				"SF-Pro-Text-SemiboldItalic.otf",
+				"SF-Pro-Text-Thin.otf",
+				"SF-Pro-Text-ThinItalic.otf",
+				"SF-Pro-Text-Ultralight.otf",
+				"SF-Pro-Text-UltralightItalic.otf",
+			);
+			target = 5E7C95602C4923AC0017CF3B /* 돌맹이 */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
@@ -54,6 +78,7 @@
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		5E7C95632C4923AC0017CF3B /* 돌맹이 */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5E7C95892C4923AD0017CF3B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 5E7C958D2C4923AD0017CF3B /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "돌맹이"; sourceTree = "<group>"; };
+		5E7C95962C4924200017CF3B /* font */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5E7C95E02C4924620017CF3B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = font; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +111,7 @@
 			children = (
 				5E7C95632C4923AC0017CF3B /* 돌맹이 */,
 				5E7C95622C4923AC0017CF3B /* Products */,
+				5E7C95962C4924200017CF3B /* font */,
 			);
 			sourceTree = "<group>";
 		};
