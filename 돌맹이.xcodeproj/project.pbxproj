@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 74;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
@@ -33,25 +33,14 @@
 		5E7C95892C4923AD0017CF3B /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				/Localized/LaunchScreen.storyboard,
 				Info.plist,
 			);
 			target = 5E7C95602C4923AC0017CF3B /* 돌맹이 */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		5E7C958D2C4923AD0017CF3B /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = 5E7C955F2C4923AC0017CF3B /* Resources */;
-			membershipExceptions = (
-				Base.lproj/LaunchScreen.storyboard,
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5E7C95632C4923AC0017CF3B /* 돌맹이 */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5E7C95892C4923AD0017CF3B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 5E7C958D2C4923AD0017CF3B /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "돌맹이"; sourceTree = "<group>"; };
+		5E7C95632C4923AC0017CF3B /* 돌맹이 */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5E7C95892C4923AD0017CF3B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "돌맹이"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +175,7 @@
 				};
 			};
 			buildConfigurationList = 5E7C955C2C4923AB0017CF3B /* Build configuration list for PBXProject "돌맹이" */;
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -193,7 +183,6 @@
 				Base,
 			);
 			mainGroup = 5E7C95582C4923AB0017CF3B;
-			preferredProjectObjectVersion = 60;
 			productRefGroup = 5E7C95622C4923AC0017CF3B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
