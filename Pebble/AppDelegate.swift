@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  돌맹이
+//  Pebble
 //
-//  Created by 신호연 on 7/18/24.
+//  Created by 신호연 on 7/19/24.
 //
 
 import UIKit
