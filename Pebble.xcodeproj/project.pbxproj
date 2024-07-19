@@ -14,7 +14,6 @@
 		5E6DC6B32C49ED4600F43B15 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				/Localized/LaunchScreen.storyboard,
 				/Localized/Main.storyboard,
 				Info.plist,
 			);
@@ -27,7 +26,6 @@
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			buildPhase = 5E6DC69F2C49ED4400F43B15 /* Resources */;
 			membershipExceptions = (
-				Base.lproj/LaunchScreen.storyboard,
 				Base.lproj/Main.storyboard,
 			);
 		};

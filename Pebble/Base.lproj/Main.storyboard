@@ -26,12 +26,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="돌맹이" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIo-yN-uyC">
                                 <rect key="frame" x="161.66666666666666" y="494" width="52" height="24"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="DmR-3p-LlL">
-                                <rect key="frame" x="50.666666666666657" y="618" width="274" height="80"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="DmR-3p-LlL">
+                                <rect key="frame" x="39.666666666666657" y="618" width="296" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbj-Ax-xtO">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -45,9 +45,13 @@
                                         <buttonConfiguration key="configuration" style="plain" image="drop" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="waterButtonTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="V2n-K5-NDw"/>
+                                            <action selector="waterButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bWs-U6-xsg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1Q-6g-vQk">
-                                        <rect key="frame" x="97" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="108" y="0.0" width="80" height="80"/>
                                         <color key="backgroundColor" red="0.99607843139999996" green="0.81960784310000001" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="g6E-bp-u4C"/>
@@ -58,9 +62,12 @@
                                         <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="heartButtonTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="M7Q-z3-xT7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksW-ZQ-y0G">
-                                        <rect key="frame" x="194" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="216" y="0.0" width="80" height="80"/>
                                         <color key="backgroundColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="A3a-5q-pnv"/>
@@ -71,11 +78,14 @@
                                         <buttonConfiguration key="configuration" style="plain" image="star" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="starButtonTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="HpL-Qx-dk2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOJ-Bx-uZ0">
-                                <rect key="frame" x="20" y="70" width="24" height="24"/>
+                                <rect key="frame" x="331" y="70" width="24" height="24"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="DWY-Kl-X8s"/>
@@ -83,22 +93,29 @@
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="line.3.horizontal" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gGE-8R-uk2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0aZ-fj-Q4f"/>
-                            <constraint firstItem="QOJ-Bx-uZ0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1tw-rL-H7B"/>
                             <constraint firstItem="DmR-3p-LlL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2bM-3B-98S"/>
                             <constraint firstItem="DmR-3p-LlL" firstAttribute="top" secondItem="QIo-yN-uyC" secondAttribute="bottom" constant="100" id="CFa-6l-1wa"/>
-                            <constraint firstItem="QOJ-Bx-uZ0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="MvB-v1-rIK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QOJ-Bx-uZ0" secondAttribute="trailing" constant="20" id="MEt-hb-u58"/>
                             <constraint firstItem="QIo-yN-uyC" firstAttribute="top" secondItem="gGE-8R-uk2" secondAttribute="bottom" constant="28" id="U5A-lp-hK1"/>
                             <constraint firstItem="gGE-8R-uk2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bir-4N-ExG"/>
                             <constraint firstItem="QIo-yN-uyC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fRj-YD-169"/>
+                            <constraint firstItem="QOJ-Bx-uZ0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="tPf-TH-Mzl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="editButton" destination="QOJ-Bx-uZ0" id="WRU-sa-wTa"/>
+                        <outlet property="heartButton" destination="P1Q-6g-vQk" id="2YB-gv-8aR"/>
+                        <outlet property="name" destination="QIo-yN-uyC" id="chC-EY-sAI"/>
+                        <outlet property="starButton" destination="ksW-ZQ-y0G" id="DQF-C3-5DM"/>
+                        <outlet property="waterButton" destination="Cbj-Ax-xtO" id="JHL-QN-fUQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,7 +125,7 @@
     <resources>
         <image name="drop" catalog="system" width="96" height="128"/>
         <image name="heart" catalog="system" width="128" height="107"/>
-        <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="stone" width="149" height="124"/>
     </resources>

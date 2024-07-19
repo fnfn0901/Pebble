@@ -2,27 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>SF-Pro-Text-Semibold</string>
-		<string>SF-Pro-Text-Semiboldltalic</string>
-		<string>SF-Pro-Text-Thin</string>
-		<string>SF-Pro-Text-Thinltalic</string>
-		<string>SF-Pro-Text-Ultralight</string>
-		<string>SF-Pro-Text-Ultralightltalic</string>
-		<string>SF-Pro-Text-Regular</string>
-		<string>SF-Pro-Text-Regularltalic</string>
-		<string>SF-Pro-Text-Lightltalic</string>
-		<string>SF-Pro-Text-Medium</string>
-		<string>SF-Pro-Text-Midiumltalic</string>
-		<string>SF-Pro-Text-Bold</string>
-		<string>SF-Pro-Text-Boldltalic</string>
-		<string>SF-Pro-Text-Heavy</string>
-		<string>SF-Pro-Text-Heavyltalic</string>
-		<string>SF-Pro-Text-Light</string>
-		<string>SF-Pro-Text-Black</string>
-		<string>SF-Pro-Text-Blackltalic</string>
-	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
