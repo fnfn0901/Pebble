@@ -18,6 +18,9 @@ class ViewController: UIViewController {
         
         // editButton의 터치 영역 설정
         configureEditButtonTapArea()
+        
+        // 저장된 이름 불러오기
+        loadName()
     }
     
     func configureCircularButton(button: UIButton, radius: CGFloat) {
@@ -66,10 +69,21 @@ class ViewController: UIViewController {
     @IBAction func starButtonTapped(_ sender: UIButton) {
         // starButtonTapped 액션 구현
     }
+    
+    func saveName(_ name: String) {
+        UserDefaults.standard.set(name, forKey: "savedName")
+    }
+    
+    func loadName() {
+        if let savedName = UserDefaults.standard.string(forKey: "savedName") {
+            self.name.text = savedName
+        }
+    }
 }
 
 extension ViewController: NameSettingControllerDelegate {
     func didSaveName(name: String) {
         self.name.text = name
+        saveName(name)
     }
 }
