@@ -1,13 +1,29 @@
 import UIKit
 
+// UITextField의 서브클래스 생성
+class CustomTextField: UITextField {
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        let touchableArea = self.bounds.insetBy(dx: -20, dy: -20)
+        return touchableArea.contains(point) ? self : nil
+    }
+}
+
+// UIButton의 서브클래스 생성
+class CustomButton: UIButton {
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        let touchableArea = self.bounds.insetBy(dx: -20, dy: -20)
+        return touchableArea.contains(point) ? self : nil
+    }
+}
+
 protocol NameSettingControllerDelegate: AnyObject {
     func didSaveName(name: String)
 }
 
 class NameSettingController: UIViewController {
 
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var textField: CustomTextField!
+    @IBOutlet weak var saveButton: CustomButton!
     
     weak var delegate: NameSettingControllerDelegate?
     var initialText: String?
@@ -30,6 +46,7 @@ class NameSettingController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
+        // delegate를 통해 이름 저장
         delegate?.didSaveName(name: textField.text ?? "")
         dismiss(animated: true, completion: nil)
     }
