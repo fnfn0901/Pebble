@@ -1,7 +1,6 @@
 import UIKit
 
 class HeartEmitterView: UIView {
-    
     private var heartEmitter: CAEmitterLayer?
     
     func startHeartEmitter() {
@@ -23,7 +22,7 @@ class HeartEmitterView: UIView {
         guard let heartEmitter = heartEmitter else { return }
         heartEmitter.birthRate = 0
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { // 여기서 2초 후에 emitter 제거
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             heartEmitter.removeFromSuperlayer()
             self.heartEmitter = nil
         }

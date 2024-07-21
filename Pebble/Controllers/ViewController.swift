@@ -1,7 +1,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var waterButton: UIButton!
     @IBOutlet weak var heartButton: UIButton!
@@ -9,47 +8,37 @@ class ViewController: UIViewController {
     @IBOutlet weak var editButton: UIButton!
     
     let heartEmitterView = HeartEmitterView()
-    let starImageView = StarImageView(frame: CGRect(x: 0, y: 0, width: 168, height: 76))
+    let starEmitterView = StarEmitterView(frame: CGRect(x: 0, y: 0, width: 168, height: 76))
     let waterEmitterView = WaterEmitterView(frame: .zero)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 버튼을 원형으로 설정하고 그림자 및 애니메이션 추가
         configureCircularButton(button: waterButton, radius: 40)
         configureCircularButton(button: heartButton, radius: 40)
         configureCircularButton(button: starButton, radius: 40)
         
-        // editButton의 터치 영역 설정
         configureEditButtonTapArea()
-        
-        // 저장된 이름 불러오기
         loadName()
         
-        // 하트 버튼에 Touch Down 및 Touch Up Inside 이벤트 추가
         heartButton.addTarget(self, action: #selector(heartButtonTouchDown), for: .touchDown)
         heartButton.addTarget(self, action: #selector(heartButtonTouchUpInside), for: .touchUpInside)
         heartButton.addTarget(self, action: #selector(heartButtonTouchUpOutside), for: .touchUpOutside)
         
-        // heartEmitterView 설정
         heartEmitterView.frame = view.bounds
         heartEmitterView.isUserInteractionEnabled = false
         view.addSubview(heartEmitterView)
         
-        // starImageView 설정
-        starImageView.center = CGPoint(x: view.center.x - 7, y: view.center.y - 60)
-        view.addSubview(starImageView)
+        starEmitterView.center = CGPoint(x: view.center.x - 7, y: view.center.y - 60)
+        view.addSubview(starEmitterView)
         
-        // starButton에 Touch Down 및 Touch Up Inside 이벤트 추가
         starButton.addTarget(self, action: #selector(starButtonTouchDown), for: .touchDown)
         starButton.addTarget(self, action: #selector(starButtonTouchUp), for: .touchUpInside)
         starButton.addTarget(self, action: #selector(starButtonTouchUp), for: .touchUpOutside)
         
-        // waterEmitterView 설정
         waterEmitterView.center = view.center
         view.addSubview(waterEmitterView)
         
-        // waterButton에 Touch Down 및 Touch Up Inside 이벤트 추가
         waterButton.addTarget(self, action: #selector(waterButtonTouchDown), for: .touchDown)
         waterButton.addTarget(self, action: #selector(waterButtonTouchUp), for: .touchUpInside)
         waterButton.addTarget(self, action: #selector(waterButtonTouchUp), for: .touchUpOutside)
@@ -59,21 +48,18 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = radius
         button.layer.masksToBounds = true
         
-        // 그림자 설정
         button.layer.shadowColor = UIColor.black.cgColor
         button.layer.shadowOffset = CGSize(width: 0, height: 4)
         button.layer.shadowOpacity = 0.2
         button.layer.shadowRadius = 8
         button.layer.masksToBounds = false
         
-        // 버튼 애니메이션 이벤트 추가
         button.addTarget(self, action: #selector(buttonTouchDown(_:)), for: .touchDown)
         button.addTarget(self, action: #selector(buttonTouchUp(_:)), for: .touchUpInside)
         button.addTarget(self, action: #selector(buttonTouchUp(_:)), for: .touchUpOutside)
     }
     
     func configureEditButtonTapArea() {
-        // editButton의 터치 영역을 48x48로 변경
         let largerFrame = CGRect(
             x: editButton.frame.origin.x - (48 - editButton.frame.size.width) / 2,
             y: editButton.frame.origin.y - (48 - editButton.frame.size.height) / 2,
@@ -83,8 +69,6 @@ class ViewController: UIViewController {
         
         let touchAreaView = UIView(frame: largerFrame)
         touchAreaView.backgroundColor = .clear
-        
-        // 터치 이벤트를 받도록 설정
         touchAreaView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(editButtonTapped(_:)))
         touchAreaView.addGestureRecognizer(tapGesture)
@@ -105,7 +89,6 @@ class ViewController: UIViewController {
     }
     
     @objc func editButtonTapped(_ sender: UITapGestureRecognizer) {
-        // SettingName 스토리보드에서 NameSettingController를 로드
         let storyboard = UIStoryboard(name: "SettingName", bundle: nil)
         if let nameSettingVC = storyboard.instantiateViewController(withIdentifier: "NameSettingController") as? NameSettingController {
             nameSettingVC.initialText = name.text
@@ -137,11 +120,11 @@ class ViewController: UIViewController {
     }
     
     @objc func starButtonTouchDown() {
-        starImageView.showStar()
+        starEmitterView.showStar()
     }
     
     @objc func starButtonTouchUp() {
-        starImageView.hideStar()
+        starEmitterView.hideStar()
     }
     
     @objc func waterButtonTouchDown() {

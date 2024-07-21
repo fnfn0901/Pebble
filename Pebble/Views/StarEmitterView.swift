@@ -1,6 +1,6 @@
 import UIKit
 
-class StarImageView: UIImageView {
+class StarEmitterView: UIImageView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()

@@ -1,7 +1,6 @@
 import UIKit
 
 class WaterEmitterView: UIView {
-    
     private var waterEmitter: CAEmitterLayer?
     private let emitterSize: CGSize = CGSize(width: 700, height: 200)
     
@@ -43,7 +42,7 @@ class WaterEmitterView: UIView {
         guard let waterEmitter = waterEmitter else { return }
         waterEmitter.birthRate = 0
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) { // 여기서 4초 후에 emitter 제거
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
             waterEmitter.removeFromSuperlayer()
             self.waterEmitter = nil
         }
