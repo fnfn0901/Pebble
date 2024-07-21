@@ -8,6 +8,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var starButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
     
+    let heartEmitterView = HeartEmitterView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +23,16 @@ class ViewController: UIViewController {
         
         // 저장된 이름 불러오기
         loadName()
+        
+        // 하트 버튼에 Touch Down 및 Touch Up Inside 이벤트 추가
+        heartButton.addTarget(self, action: #selector(heartButtonTouchDown), for: .touchDown)
+        heartButton.addTarget(self, action: #selector(heartButtonTouchUpInside), for: .touchUpInside)
+        heartButton.addTarget(self, action: #selector(heartButtonTouchUpOutside), for: .touchUpOutside)
+        
+        // heartEmitterView 설정
+        heartEmitterView.frame = view.bounds
+        heartEmitterView.isUserInteractionEnabled = false
+        view.addSubview(heartEmitterView)
     }
     
     func configureCircularButton(button: UIButton, radius: CGFloat) {
@@ -78,6 +90,18 @@ class ViewController: UIViewController {
         if let savedName = UserDefaults.standard.string(forKey: "savedName") {
             self.name.text = savedName
         }
+    }
+    
+    @objc func heartButtonTouchDown() {
+        heartEmitterView.startHeartEmitter()
+    }
+    
+    @objc func heartButtonTouchUpInside() {
+        heartEmitterView.stopHeartEmitter()
+    }
+    
+    @objc func heartButtonTouchUpOutside() {
+        heartEmitterView.stopHeartEmitter()
     }
 }
 
