@@ -151,6 +151,7 @@
 				DEVELOPMENT_TEAM = QC8QR8UH59;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pebble/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "돌맹이";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -185,6 +186,7 @@
 				DEVELOPMENT_TEAM = QC8QR8UH59;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pebble/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "돌맹이";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
