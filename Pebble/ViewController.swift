@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 버튼을 원형으로 설정
+        // 버튼을 원형으로 설정하고 그림자 및 애니메이션 추가
         configureCircularButton(button: waterButton, radius: 40)
         configureCircularButton(button: heartButton, radius: 40)
         configureCircularButton(button: starButton, radius: 40)
@@ -58,6 +58,18 @@ class ViewController: UIViewController {
     func configureCircularButton(button: UIButton, radius: CGFloat) {
         button.layer.cornerRadius = radius
         button.layer.masksToBounds = true
+        
+        // 그림자 설정
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 4)
+        button.layer.shadowOpacity = 0.2
+        button.layer.shadowRadius = 8
+        button.layer.masksToBounds = false
+        
+        // 버튼 애니메이션 이벤트 추가
+        button.addTarget(self, action: #selector(buttonTouchDown(_:)), for: .touchDown)
+        button.addTarget(self, action: #selector(buttonTouchUp(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(buttonTouchUp(_:)), for: .touchUpOutside)
     }
     
     func configureEditButtonTapArea() {
@@ -78,6 +90,18 @@ class ViewController: UIViewController {
         touchAreaView.addGestureRecognizer(tapGesture)
         
         self.view.addSubview(touchAreaView)
+    }
+    
+    @objc func buttonTouchDown(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.1) {
+            sender.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+        }
+    }
+    
+    @objc func buttonTouchUp(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.1) {
+            sender.transform = CGAffineTransform.identity
+        }
     }
     
     @objc func editButtonTapped(_ sender: UITapGestureRecognizer) {
