@@ -24,7 +24,7 @@ class StarImageView: UIImageView {
     }
     
     func hideStar() {
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.8) {
             self.alpha = 0
         }
     }

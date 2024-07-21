@@ -10,7 +10,8 @@ class ViewController: UIViewController {
     
     let heartEmitterView = HeartEmitterView()
     let starImageView = StarImageView(frame: CGRect(x: 0, y: 0, width: 168, height: 76))
-    
+    let waterEmitterView = WaterEmitterView(frame: .zero)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +44,15 @@ class ViewController: UIViewController {
         starButton.addTarget(self, action: #selector(starButtonTouchDown), for: .touchDown)
         starButton.addTarget(self, action: #selector(starButtonTouchUp), for: .touchUpInside)
         starButton.addTarget(self, action: #selector(starButtonTouchUp), for: .touchUpOutside)
+        
+        // waterEmitterView 설정
+        waterEmitterView.center = view.center
+        view.addSubview(waterEmitterView)
+        
+        // waterButton에 Touch Down 및 Touch Up Inside 이벤트 추가
+        waterButton.addTarget(self, action: #selector(waterButtonTouchDown), for: .touchDown)
+        waterButton.addTarget(self, action: #selector(waterButtonTouchUp), for: .touchUpInside)
+        waterButton.addTarget(self, action: #selector(waterButtonTouchUp), for: .touchUpOutside)
     }
     
     func configureCircularButton(button: UIButton, radius: CGFloat) {
@@ -79,18 +89,6 @@ class ViewController: UIViewController {
             self.present(nameSettingVC, animated: true, completion: nil)
         }
     }
-
-    @IBAction func waterButtonTapped(_ sender: UIButton) {
-        // waterButtonTapped 액션 구현
-    }
-    
-    @IBAction func heartButtonTapped(_ sender: UIButton) {
-        // heartButtonTapped 액션 구현
-    }
-    
-    @IBAction func starButtonTapped(_ sender: UIButton) {
-        // starButtonTapped 액션 구현
-    }
     
     func saveName(_ name: String) {
         UserDefaults.standard.set(name, forKey: "savedName")
@@ -120,6 +118,14 @@ class ViewController: UIViewController {
     
     @objc func starButtonTouchUp() {
         starImageView.hideStar()
+    }
+    
+    @objc func waterButtonTouchDown() {
+        waterEmitterView.startWaterEmitter()
+    }
+    
+    @objc func waterButtonTouchUp() {
+        waterEmitterView.stopWaterEmitter()
     }
 }
 

@@ -20,8 +20,13 @@ class HeartEmitterView: UIView {
     }
     
     func stopHeartEmitter() {
-        heartEmitter?.removeFromSuperlayer()
-        heartEmitter = nil
+        guard let heartEmitter = heartEmitter else { return }
+        heartEmitter.birthRate = 0
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { // 여기서 2초 후에 emitter 제거
+            heartEmitter.removeFromSuperlayer()
+            self.heartEmitter = nil
+        }
     }
     
     private func makeEmitterCell(imageName: String) -> CAEmitterCell {

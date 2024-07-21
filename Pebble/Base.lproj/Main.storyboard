@@ -45,10 +45,6 @@
                                         <buttonConfiguration key="configuration" style="plain" image="drop" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <action selector="waterButtonTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="V2n-K5-NDw"/>
-                                            <action selector="waterButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bWs-U6-xsg"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1Q-6g-vQk">
                                         <rect key="frame" x="108" y="0.0" width="80" height="80"/>
@@ -62,9 +58,6 @@
                                         <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <action selector="heartButtonTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="M7Q-z3-xT7"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksW-ZQ-y0G">
                                         <rect key="frame" x="216" y="0.0" width="80" height="80"/>
@@ -78,9 +71,6 @@
                                         <buttonConfiguration key="configuration" style="plain" image="star" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <action selector="starButtonTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="HpL-Qx-dk2"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
