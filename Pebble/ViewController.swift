@@ -9,6 +9,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var editButton: UIButton!
     
     let heartEmitterView = HeartEmitterView()
+    let starImageView = StarImageView(frame: CGRect(x: 0, y: 0, width: 168, height: 76))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,15 @@ class ViewController: UIViewController {
         heartEmitterView.frame = view.bounds
         heartEmitterView.isUserInteractionEnabled = false
         view.addSubview(heartEmitterView)
+        
+        // starImageView 설정
+        starImageView.center = CGPoint(x: view.center.x - 7, y: view.center.y - 60)
+        view.addSubview(starImageView)
+        
+        // starButton에 Touch Down 및 Touch Up Inside 이벤트 추가
+        starButton.addTarget(self, action: #selector(starButtonTouchDown), for: .touchDown)
+        starButton.addTarget(self, action: #selector(starButtonTouchUp), for: .touchUpInside)
+        starButton.addTarget(self, action: #selector(starButtonTouchUp), for: .touchUpOutside)
     }
     
     func configureCircularButton(button: UIButton, radius: CGFloat) {
@@ -102,6 +112,14 @@ class ViewController: UIViewController {
     
     @objc func heartButtonTouchUpOutside() {
         heartEmitterView.stopHeartEmitter()
+    }
+    
+    @objc func starButtonTouchDown() {
+        starImageView.showStar()
+    }
+    
+    @objc func starButtonTouchUp() {
+        starImageView.hideStar()
     }
 }
 
